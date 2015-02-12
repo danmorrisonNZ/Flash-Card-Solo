@@ -1,19 +1,19 @@
-all?,
+all?,passes each element in a collection to a block and returns true if the block never evaluates to false or nil.
 
 
-any?,
+any?,passes each element in a collection to a block and returns true if any ever evaluates to true.
 
 
-chunk,
+chunk,runs through elements and groups them if they have the same return value. If it encounters a different return value, starts a new group.
 
 
-collect,
+collect,takes a block and returns a new array with the result of running each element through that block once.
 
 
-collect_concat,
+collect_concat/flat_map, take a block and returns a new array with the concatenated(combined into one) results of running each element through that block once.
 
 
-count,
+count,returns the number of items in enum, if an argument is passed, returns the number of items that are the same as the argument. If a block is passed, will return the number of items that return true.
 
 
 cycle,
