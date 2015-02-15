@@ -36,7 +36,9 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
-    pg (0.17.1)
+    nokogiri (1.6.4.1-x86-mingw32)
+      mini_portile (~> 0.6.0)
+    pg (0.18.1-x86-mingw32)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -79,6 +81,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   activerecord
@@ -86,7 +89,7 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
-  pg
+  pg (~> 0.18.1)
   rack-test
   rake
   rspec
