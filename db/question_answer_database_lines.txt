@@ -27,7 +27,7 @@ Iterates the given block for each slice of <n> elements. If no block is given, r
 each_with_index
 Calls block with two arguments, the item and its index, for each item in enum. Given arguments are passed through to each().
 each_with_object
-Iterates the given block for each element with an arbitrary object given, and returns the initially given object.	
+Iterates the given block for each element with an arbitrary object given, and returns the initially given object.
 entries
 Returns an array containing the items in enum
 find
@@ -47,9 +47,9 @@ Groups the collection by result of the block. Returns a hash where the keys are 
 include?
 Returns true if any member of enum equals obj. Equality is tested using ==.
 inject
-Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator. If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value for the method. If you do not explicitly specify an initial value for memo, then the first element of collection is used as the initial value of memo.
+Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 lazy
-Returns a lazy enumerator, whose methods map/collect, flat_map/collect_concat, select/find_all, reject, grep, zip, take, #take_while, drop, and #drop_while enumerate values only on an as-needed basis. However, if a block is given to zip, values are enumerated immediately.
+Returns a lazy enumerator, whose methods map/collect, flat_map/collect_concat, select/find_all, reject, grep, zip, take, #take_while, drop, and #drop_while enumerate values only on an as-needed basis.
 map
 Returns a new array with the results of running block once for every element in enum.
 max
@@ -73,7 +73,7 @@ Passes each element of the collection to the given block. The method returns tru
 partition
 Returns two arrays, the first containing the elements of enum for which the block evaluates to true, the second containing the rest.
 reduce
-Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator. If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value for the method. If you do not explicitly specify an initial value for memo, then the first element of collection is used as the initial value of memo.
+Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 reject
 Returns an array for all elements of enum for which the given block returns false.
 reverse_each
@@ -81,13 +81,13 @@ Builds a temporary array and traverses that array in reverse order.
 select
 Returns an array containing all elements of enum for which the given block returns a true value.
 slice_after
-Creates an enumerator for each chunked elements. The ends of chunks are defined by pattern and the block. If pattern === elt returns true or the block returns true for the element, the element is end of a chunk. The === and block is called from the first element to the last element of enum. The result enumerator yields the chunked elements as an array. 
+Creates an enumerator for each chunked elements. The ends of chunks are defined by pattern and the block. If pattern === elt returns true or the block returns true for the element, the element is end of a chunk.
 slice_before
-Creates an enumerator for each chunked elements. The beginnings of chunks are defined by pattern and the block. If pattern === elt returns true or the block returns true for the element, the element is beginning of a chunk. The === and block is called from the first element to the last element of enum. The result for the first element is ignored.
+Creates an enumerator for each chunked elements. The beginnings of chunks are defined by pattern and the block. If pattern === elt returns true or the block returns true for the element, the element is beginning of a chunk.
 slice_when
-Creates an enumerator for each chunked elements. The beginnings of chunks are defined by the block. This method split each chunk using adjacent elements, elt_before and elt_after, in the receiver enumerator. This method split chunks between elt_before and elt_after where the block returns true. The block is called the length of the receiver enumerator minus one.
+Creates an enumerator for each chunked elements. The beginnings of chunks are defined by the block. This method split each chunk using adjacent elements, elt_before and elt_after, in the receiver enumerator.
 sort
-Returns an array containing the items in enum sorted, either according to their own <=> method, or by using the results of the supplied block. The block should return -1, 0, or +1 depending on the comparison between a and b. As of Ruby 1.8, the method Enumerable#sort_by implements a built-in Schwartzian Transform, useful when key computation or comparison is expensive.
+Returns an array containing the items in enum sorted, either according to their own <=> method, or by using the results of the supplied block. The block should return -1, 0, or +1 depending on the comparison between a and b.
 sort_by
 Sorts enum using a set of keys generated by mapping the values in enum through the given block.
 take
@@ -99,4 +99,4 @@ Returns an array containing the items in enum.
 to_h
 Returns the result of interpreting enum as a list of [key, value] pairs.
 zip
-Takes one element from enum and merges corresponding elements from each args. This generates a sequence of n-element arrays, where n is one more than the count of arguments. The length of the resulting sequence will be enum#size. If the size of any argument is less than enum#size, nil values are supplied. If a block is given, it is invoked for each output array, otherwise an array of arrays is returned.
+Takes one element from enum and merges corresponding elements from each args. This generates a sequence of n-element arrays, where n is one more than the count of arguments. The length of the resulting sequence will be enum#size.
