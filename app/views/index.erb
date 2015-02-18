@@ -5,14 +5,18 @@
 
 <body>
 
+  <a href = "/logout"><input type="submit" value="Log Out"></a>
+  <h2>Available decks</h2>
 
-  <ul>
-    <%@cards.each do |card|%>
-    <li> <%=card.question%></li>
-      <li><%=card.answer%></li>
+    <%@deck.each do |deck|%>
+
+    <h4>Deck Name</h4>
+    <a href = '/play/<%=deck.deck_name%>'><p><%=deck.deck_name%><p></a>
+      <br>
+      <p><strong>Card count:</strong> <%=deck.card_count%></p>
       <br>
     <%end%>
-  </ul>
+
 
 
 </body>

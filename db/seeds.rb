@@ -10,4 +10,4 @@ until lines.empty?
 end
 
 Deck.create(id:1 , user_id: 1, deck_name: "eneumerable", card_count: total_lines)
-User.create(id:1, user_name:"danmorrisonNZ", first_name: "Dan", last_name:"Morrison", email: "danielroy.morrison@gmail.com", password:"1111")
+User.create( user_name:"danmorrisonNZ", first_name: "Dan", last_name:"Morrison", email: "danielroy.morrison@gmail.com", password:"1111")
